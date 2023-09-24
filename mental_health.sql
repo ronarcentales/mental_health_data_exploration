@@ -54,7 +54,7 @@ WHERE Entity NOT IN ('High SDI', 'High-income','High-income Asia Pacific', 'High
 SELECT *
 FROM mental_health.dbo.mental_health_disorder_shares_in_percentages
 WHERE Entity NOT IN ('High SDI', 'High-income','High-income Asia Pacific', 'High-middle SDI', 'Low SDI', 'Low-middle SDI', 'Middle SDI','Northern Ireland')
--- This query excludes continents and other vague locations
+-- This query excludes vague locations such as "High-income"
 
 
 
@@ -73,7 +73,7 @@ JOIN mental_health.dbo.suicide_and_depression_per_100k AS population
 WHERE disorders.Entity NOT IN ('High SDI', 'High-income','High-income Asia Pacific', 'High-middle SDI', 'Low SDI', 'Low-middle SDI', 'Middle SDI','Northern Ireland')
 ORDER BY Depressed_Population DESC, Year;
 -- ***NOTE: In the year 2017, there are about 260 million people in the world who suffer from depression.
--- ***NOTE: In the years 2000-2017, China and India appear to highest depressed populations in the world.
+-- ***NOTE: In the years 2000-2017, China and India appear to have the highest depressed populations in the world.
 
 
 
